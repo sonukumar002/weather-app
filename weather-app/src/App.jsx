@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+
+console.log("API KEY:", import.meta.env.API_KEY);
 const api = {
-  key: "38b00c6eaba32173ad66cc17792efa8e",
+  key: import.meta.env.VITE_WEATHER_API_KEY,
   base: "https://api.openweathermap.org/data/2.5/"
 }
 function App() {
