@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+// import {FaSearchLocation} from 'react-icons/fa';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 console.log("API KEY:", import.meta.env.API_KEY);
 const api = {
@@ -34,16 +37,19 @@ function App() {
     return `${day} ${date} ${month} ${year}`
   }
   return (
-    <div className={(typeof weather.main != "undefined")?((weather.main.temp>26)?"app-warm":"app"):"app"}>
+    <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 26) ? "app-warm" : "app") : "app"}>
       <main>
         <div className='search-box'>
-          <input type="text"
-            className='search-bar'
-            placeholder='search...'
-            onChange={e => setQuery(e.target.value)}
-            value={query}
-            onKeyDown={search}
-          />
+          <div className="search-input-wrapper">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text"
+              className='search-bar'
+              placeholder='search...'
+              onChange={e => setQuery(e.target.value)}
+              value={query}
+              onKeyDown={search}
+            />
+          </div>
         </div>
 
         {(typeof weather.main != "undefined") ? (
@@ -57,7 +63,11 @@ function App() {
                 {Math.round(weather.main.temp)}&#176;C
               </div>
               <div className="weather">
-                {weather.weather[0].main}
+                <img
+                  src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
+                  alt='weather-icon'
+                />
+                <p>{weather.weather[0].main}</p>
               </div>
             </div>
 
