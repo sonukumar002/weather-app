@@ -41,10 +41,11 @@ function App() {
       <main>
         <div className='search-box'>
           <div className="search-input-wrapper">
-            <i class="fa-solid fa-location-dot"></i>
+            <i class="fa-solid fa-location-dot search-icon"></i>
+            
             <input type="text"
               className='search-bar'
-              placeholder='search...'
+              placeholder='Search...'
               onChange={e => setQuery(e.target.value)}
               value={query}
               onKeyDown={search}

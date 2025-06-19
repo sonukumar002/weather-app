@@ -33,24 +33,13 @@ main {
   width: 100%;
   margin: 0 0 75px;
 }
-/* .search-input-wrapper{
-   position: relative;
-  width: 100%;
-  max-width: 400px;
-  margin: auto;
-} */
-.search-icon{
-  width: 100%;
-  padding: 10px 10px 10px 30px;
-  font-size: 16px;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-}
+
 .search-bar {
   display: block;
   width: 100%;
   padding: 15px;
+  padding-left: 60px;
+  /* padding-bottom: 15px; */
   appearance: none;
   background: none;
   border: none;
@@ -61,24 +50,38 @@ main {
   box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
 
   color: #313131;
-  font-size: 20px;
+  font-size: 25px;
   transition: 0.4s ease;
 
 
+}
+.search-icon {
+  position: absolute;
+  top: 3%;
+  left: 45px;
+  transform: translateY(-50%);
+  color: #352525;
+  font-size: 1.8rem;
+  pointer-events: none;
+}
+.search-bar::placeholder{
+  left: 340px;
 }
 
 .search-box .search-bar:focus {
   background-color: rgba(255, 255, 255, 0.75);
 
 }
-.location{
+
+.location {
   color: #fff;
   font-size: 32px;
   font-weight: 500;
   text-align: center;
-  text-shadow: 3px 3px rgba(50, 50, 70, 0,5);
+  text-shadow: 3px 3px rgba(50, 50, 70, 0, 5);
 }
-.date{
+
+.date {
   color: #fff;
   font-size: 20px;
   font-weight: 300;
@@ -86,32 +89,36 @@ main {
   text-align: center;
   text-shadow: 2px 2px rgba(50, 50, 50, 0.5);
 }
-.weather-box{
+
+.weather-box {
   text-align: center;
 
 }
-.temp{
+
+.temp {
   position: relative;
   display: inline-block;
-  margin:30px auto;
+  margin: 30px auto;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   padding: 15px 25px;
   color: #fff;
   font-size: 102px;
   font-weight: 900;
-text-shadow: 3px 6px rgba(50, 50, 50 ,0.5);
-text-align: center;
-box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 3px 6px rgba(50, 50, 50, 0.5);
+  text-align: center;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
 
 }
-.weather{
+
+.weather {
   color: #fff;
   font-size: 48px;
   font-weight: 700;
-  box-shadow: 3px 3px rgba(50, 50, 50 ,0.5);
-}
-.weather {
+  box-shadow: 3px 3px rgba(50, 50, 50, 0.5);
+
+
+
   display: flex;
   flex-direction: column;
   align-items: center;
